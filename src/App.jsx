@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import './index.css';
 
+// Import local images so Vite bundles them with correct base path for GitHub Pages
+import heroFoodImg from './assets/hero_food.jpg';
+import aboutChefImg from './assets/about_chef.jpg';
+import menuAppetizerImg from './assets/menu_appetizer.jpg';
+import menuMainImg from './assets/menu_main.jpg';
+import menuDessertImg from './assets/menu_dessert.jpg';
+import cateringEventImg from './assets/catering_event.jpg';
+
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -141,7 +149,7 @@ function App() {
       <section 
         id="home" 
         className="relative flex items-center min-h-[90vh] lg:min-h-screen bg-cover bg-center overflow-hidden" 
-        style={{ backgroundImage: "url('/hero_food.jpg')" }}
+        style={{ backgroundImage: `url(${heroFoodImg})` }}
       >
         {/* Layered Rich Gradient Overlay in #061813 and #007C5A */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#061813] via-[#061813]/90 to-transparent w-full md:w-[75%] lg:w-[65%]" />
@@ -220,7 +228,7 @@ function App() {
             <div className="absolute inset-0 border-2 border-[#FCCC00] translate-x-3 sm:translate-x-5 translate-y-3 sm:translate-y-5 rounded-2xl"></div>
             <div className="absolute -inset-1 bg-gradient-to-tr from-[#007C5A]/40 to-transparent rounded-2xl blur-sm"></div>
             <img 
-              src="/about_chef.jpg" 
+              src={aboutChefImg} 
               alt="Executive Chef Alanzo" 
               className="relative rounded-2xl shadow-2xl w-full h-[400px] sm:h-[480px] object-cover border border-[#007C5A]/40" 
             />
@@ -299,7 +307,7 @@ function App() {
             <div className="menu-card group relative overflow-hidden rounded-2xl bg-[#0a251e] border border-[#007C5A]/40">
               <div className="relative overflow-hidden h-64">
                 <img 
-                  src="/menu_appetizer.jpg" 
+                  src={menuAppetizerImg} 
                   alt="Artisanal Appetizer Platter" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
@@ -325,7 +333,7 @@ function App() {
             <div className="menu-card group relative overflow-hidden rounded-2xl bg-[#0a251e] border border-[#007C5A]/40">
               <div className="relative overflow-hidden h-64">
                 <img 
-                  src="/menu_main.jpg" 
+                  src={menuMainImg} 
                   alt="Pan-Seared Wild Salmon" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
@@ -351,7 +359,7 @@ function App() {
             <div className="menu-card group relative overflow-hidden rounded-2xl bg-[#0a251e] border border-[#007C5A]/40">
               <div className="relative overflow-hidden h-64">
                 <img 
-                  src="/menu_dessert.jpg" 
+                  src={menuDessertImg} 
                   alt="Chocolate Lava Cake" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
@@ -429,7 +437,7 @@ function App() {
       <section id="contact" className="py-24 sm:py-32 px-6 sm:px-10 bg-[#061813] relative overflow-hidden flex justify-center border-t border-[#007C5A]/30">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-15" 
-          style={{ backgroundImage: "url('/catering_event.jpg')" }}
+          style={{ backgroundImage: `url(${cateringEventImg})` }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-t from-[#061813] via-[#061813]/90 to-[#061813]/70"></div>
 
